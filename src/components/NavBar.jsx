@@ -1,17 +1,13 @@
 import React from 'react'
 
-export default function NavBar() {
+export default function Navbar() {
   return (
-    <>
-    <div>
-        <ul className='text-sm h-[1px] flex gap-4 items-center justify-center text-gray-800 dark:text-white'>
-            <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-        <li>Blog</li>
+    <div className=' text-black dark:text-white opacity-60 '>
+        <ul className='flex gap-4 '>
+            <li>home</li>
+            <li>blog</li>
+            <li>projects</li>
         </ul>
     </div>
-    
-    </>
   )
 }

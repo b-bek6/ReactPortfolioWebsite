@@ -3,10 +3,9 @@
 @tailwind utilities;
 
 :root {
-  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
   font-family: 'San Francisco', Arial, sans-serif;
 }
 
 .dark{
-  background: #10101d;
+  background: #111010;
 }

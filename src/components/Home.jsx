@@ -1,96 +1,34 @@
-import Particles from "react-particles";
-import AnimatedCursor from 'react-animated-cursor'
-import { loadFull } from "tsparticles";
-import { useCallback } from "react";
-import NavBar from "./NavBar";
-export default function Home() {
-    const options = {
-        particles: {
-          number: {
-            value: 15,
-            density: {
-              enable: true,
-              area: 800
-            }
-          },
-          color: {
-            value: ["#3cba54", "#f4c20d", "#db3236", "#4885ed"]
-          },
-          shape: {
-            type: "circle"
-          },
-          opacity: {
-            value: 1
-          },
-          size: {
-            value: { min: 1, max: 8 }
-          },
-          links: {
-            enable: true,
-            distance: 150,
-            color: "#808080",
-            opacity: 0.4,
-            width: 1
-          },
-          move: {
-            enable: true,
-            speed: 3,
-            direction: "none",
-            random: false,
-            straight: false,
-            outModes: "out"
-          }
-        },
-        interactivity: {
-          events: {
-            onHover: {
-              enable: true,
-              mode: "grab"
-            },
-            onClick: {
-              enable: true,
-              mode: "push"
-            }
-          },
-          modes: {
-            grab: {
-              distance: 140,
-              links: {
-                opacity: 1
-              }
-            },
-            push: {
-              quantity: 4
-            }
-          }
-        }
-      };
-    
-      const particlesInit = useCallback(async (engine) => {
-        await loadFull(engine);
-      }, []);
+import React from 'react'
+import Navbar from './Navbar'
+import Card from './Card'
+import Socialbar from './Socialbar'
+export default function home() {
   return (
     <>
-    <div className=' grid items-center text-2xl dark:text-white'>
-        <h1>BibekGhimire</h1>
-        <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-        <NavBar/>
-        <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-    </div>
-        <Particles options={options} init={particlesInit}/>
-    <div className="h-[50vh] justify-center flex flex-col items-center">
+    <div className='grid justify-start'>
+        <Navbar/>
 
-    <div className="text-5xl dark:text-white">
-        <p> 👋🏻, I am Bibek Ghimire, a Software Developer</p>
+
+    <div className="w-full pt-16 justify-center flex flex-col items-center">
+
+    <div className=" w-full" >
+        <p className="text-2xl flex text-left dark:text-white "> hey, I'm bibek 👋🏻</p>
     </div>
-    <div className="p-5 mt-5 text-white dark:text-black rounded-lg bg-gray-400 text-xl">
-       <p>Changing the 🌏 for good, All statrs with me.</p>
     </div>
+    <p className='dark:text-white pt-10 flex items-start text-left justify-start opacity-50 text-[17px]'>
+    I'm a frontend developer, optimist, and community builder. I currently work as the VP of Developer Experience at Vercel, where I lead the community for Next.js, an open-source web framework built with React.
+    </p>
+    </div>
+
+<Socialbar/>
+
+    <div className='grid grid-cols-2 gap-4'>
+
+  <Card/>
+  <Card/>
+
     </div>
     <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-    <div className="text-bold text-2xl dark:text-white">
-        About Me
-    </div>
     </>
   )
 }
