@@ -1,20 +1,23 @@
 import { useEffect, useState, useCallback } from 'react'
 import './App.css'
 import Home from './components/home';
-import AnimatedCursor from 'react-animated-cursor'
-import { loadFull } from "tsparticles";
-import About from './components/About';
-import p1 from './assets/img/profile-img.jpg'
-import Projects from './components/Projects';
+import Footer from './components/footer';
+import Navbar from './components/Navbar';
+import { Route, Routes } from 'react-router-dom';
 
 
 
 function App() {
-  const [dark, setDark] = useState(true)
+  const storedDarkMode = localStorage.getItem('darkMode');
+  const initialDarkMode = storedDarkMode === 'true';
+  const [dark, setDark] = useState(initialDarkMode);
+  
   useEffect(() => {
     if (dark) {
+      localStorage.setItem('darkMode',true)
       document.documentElement.classList.add("dark");
     } else {
+      localStorage.setItem('darkMode',false)
       document.documentElement.classList.remove("dark")
     }
   }, [dark])
@@ -23,24 +26,20 @@ function App() {
 
   return (
     <>
-      <Home />
-      <Projects />
+    <div className=' transition-all ease-in-out duration-200'>
+    <Navbar />
+      {/* <Home dark={dark} /> */}
+      <button onClick={() => { setDark(!dark) }} className='dark:bg-white bg-black dark:text-black text-white w-9 h-9 rounded-full fixed left-[70%] top-[7%] transition-all duration-500 ease-in-out'>x</button>
+      {/* <div className='flex gap-10 mt-10 justify-center items-center'>
+      </div> */}
+    </div>
+    <Routes>
+        <Route path="/" element={<Home dark={dark} />} />
+        <Route path="/blog" element={<div>this page is under construction</div>} />
+        <Route path="/projects" element={<div>this page is under construction</div>} />
+    </Routes>
+    <Footer dark={dark}/>
 
-      <button onClick={() => { setDark(!dark) }} className='dark:bg-white bg-black dark:text-black text-white w-9 h-9 rounded-full fixed left-1 top-1'>x</button>
-      <About />
-      <AnimatedCursor
-        color="222,53,12"
-        innerSize={8}
-        outerSize={35}
-        innerScale={1}
-        outerScale={1.7}
-        outerAlpha={0.3}
-        outerStyle={{
-          mixBlendMode:'exclusion'
-        }}
-      />
-      <div className='flex gap-10 mt-10 justify-center items-center'>
-      </div>
     </>
   )
 }

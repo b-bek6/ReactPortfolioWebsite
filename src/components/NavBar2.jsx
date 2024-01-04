@@ -7,14 +7,14 @@ export default function NavBar() {
     <div>
         <ul className='bg-red-500 text-md h-[1px] flex gap-4 items-start justify-start  text-gray-800 dark:text-white'>
              <button><li className='flex items-center justify-center gap-1 hover:underline'>
-              {/* <AiFillGithub/>  */}
+              <AiFillGithub/> 
               home </li></button>
              <button><li className='flex items-center justify-center gap-1'>
-              {/* <LiaDiscord/>  */}
+              <LiaDiscord/> 
              blog 
              </li></button>
              <button><li className='flex items-center justify-center gap-1'>
-              {/* <AiFillLinkedin/> */}
+              <AiFillLinkedin/>
               projects
                </li></button>
         </ul>

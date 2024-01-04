@@ -9,3 +9,49 @@
 .dark{
   background: #111010;
 }
+
+ #root {
+  min-width: 350px;
+}
+
+/* styles.css */
+
+@font-face {
+  font-family: 'RubikScribble';
+  src: url('./assets/fonts/RubikScribble-Regular.ttf');
+}
+@font-face {
+  font-family: 'Poppins-BlackItalic';
+  src: url('./assets/fonts/Poppins-BlackItalic.ttf');
+}
+
+body {
+  font-family: 'Rubik Scribble', sans-serif;
+}
+
+
+/*
+
+
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  box-sizing: border-box;
+} */
+
+
+
+@layer components {
+  .container {
+      @apply mx-auto px-[30px] md:px-[15px] max-w-[750px] md:max-w-[750px] xl:max-w-[750px]
+  }
+
+  /* <div className='text-[18px] text-black dark:text-white flex justify-around items-center gap-8 py-3 mt-5  dark:border-[#404040] border-[#b7b6b6] border rounded-sm  dark:bg-[#262626] bg-[#dfdfdf]'> */
+
+
+}

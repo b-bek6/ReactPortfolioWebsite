@@ -4,7 +4,7 @@ import { AiOutlineInstagram } from 'react-icons/ai'
 
 export default function Socialbar() {
   return (
-    <div className='relative'>
+    <div className='relative container'>
         <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700"></hr>
         <div className='flex gap-4 divide-x justify-evenly'>
 <div className='flex gap-4'>
