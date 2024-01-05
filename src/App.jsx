@@ -1,9 +1,10 @@
-import { useEffect, useState, useCallback } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import Home from './components/home';
 import Footer from './components/footer';
 import Navbar from './components/Navbar';
 import { Route, Routes } from 'react-router-dom';
+import Blogs from './pages/Blogs';
 
 
 
@@ -33,11 +34,14 @@ function App() {
       {/* <div className='flex gap-10 mt-10 justify-center items-center'>
       </div> */}
     </div>
+    <div className='min-h-[60vh]'>
+
     <Routes>
         <Route path="/" element={<Home dark={dark} />} />
-        <Route path="/blog" element={<div>this page is under construction</div>} />
+        <Route path="/blog" element={<Blogs/>} />
         <Route path="/projects" element={<div>this page is under construction</div>} />
     </Routes>
+    </div>
     <Footer dark={dark}/>
 
     </>
