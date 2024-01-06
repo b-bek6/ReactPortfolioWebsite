@@ -63,7 +63,7 @@ function App() {
         <Route path="/" element={<Home dark={dark} />} />
         <Route path="/blog" element={<Blogs/>} />
         <Route path="/blog/:id" element={<SingleBlogs/>} />
-        <Route path="/projects" element={<div>this page is under construction</div>} />
+        <Route path="/projects" element={<div className='container text-2xl text-red-700 h-[60vh] flex justify-center items-center'>this page is under construction</div>} />
     </Routes>
     </div>
     <Footer dark={dark}/>
