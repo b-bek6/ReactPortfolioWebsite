@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import Loading from '../components/Loading';
 
 
 
@@ -8,6 +9,7 @@ import React, { useState, useEffect } from "react";
 
 
 export default function SingleBlogs() {
+  const [loading, setLoading] = useState(true)
   
   const { id } = useParams();
   
@@ -27,7 +29,10 @@ export default function SingleBlogs() {
 
   const bloggerWithFetch = async () => {
     try {
-      const response = await fetch(bloggerUrl).then(setres (false));
+      const response = await fetch(bloggerUrl).then(res=>{
+        setLoading(false);
+        return res
+      });
       console.log(response)
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -42,21 +47,25 @@ export default function SingleBlogs() {
   };
 
   return (
-    
-    <div className='container mt-10 text-left  dark:text-primary text-darkPrimary'>
-      {(title&&userData) &&
+    <>
+      <div className='container mt-10 text-left  dark:text-primary text-darkPrimary'>
+    {
+      !loading ?
       <>
-      
-      
-      
       <div className='mb-4 text-2xl dark:text-primary text-darkPrimary border-0 font-bold'>
         {title}
       </div>
 
         <div dangerouslySetInnerHTML={{ __html: userData }} />
       </>
-      }
-
-        </div>
+      :
+      <div>
+        <Loading/>
+    </div>
+    }
+    
+    </div>
+    
+    </>
   );
 }

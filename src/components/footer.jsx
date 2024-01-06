@@ -62,18 +62,20 @@ export default function Footer({ dark }) {
 
                     <a
                         href="https://youtube.com"
-                        className="bg-white rounded-full text-black mx-2"
+                        className="bg-white rounded-full  text-[#b7b6b6] dark:text-[#404040] "
+                        
                     >
+
                         <svg
-                            className='-z-10'
                             viewBox="0 0 960 1000"
                             fill="currentColor"
-                            height="1.5em"
-                            width="1.5em"
+                            height="2em"
+                            width="2em"
                             xmlns="http://www.w3.org/2000/svg"
                         >
                             <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
                         </svg>
+                        
                     </a>
 
                 </div>
