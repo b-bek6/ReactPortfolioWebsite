@@ -5,6 +5,7 @@ import Footer from './components/footer';
 import Navbar from './components/Navbar';
 import { Route, Routes } from 'react-router-dom';
 import Blogs from './pages/Blogs';
+import SingleBlogs from './pages/SingleBlogs';
 
 
 
@@ -39,6 +40,7 @@ function App() {
     <Routes>
         <Route path="/" element={<Home dark={dark} />} />
         <Route path="/blog" element={<Blogs/>} />
+        <Route path="/blog/:id" element={<SingleBlogs/>} />
         <Route path="/projects" element={<div>this page is under construction</div>} />
     </Routes>
     </div>
