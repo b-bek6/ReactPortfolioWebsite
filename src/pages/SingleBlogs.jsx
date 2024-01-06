@@ -27,7 +27,7 @@ export default function SingleBlogs() {
 
   const bloggerWithFetch = async () => {
     try {
-      const response = await fetch(bloggerUrl);
+      const response = await fetch(bloggerUrl).then(setres (false));
       console.log(response)
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -42,12 +42,21 @@ export default function SingleBlogs() {
   };
 
   return (
+    
     <div className='container mt-10 text-left  dark:text-primary text-darkPrimary'>
+      {(title&&userData) &&
+      <>
+      
+      
+      
       <div className='mb-4 text-2xl dark:text-primary text-darkPrimary border-0 font-bold'>
         {title}
       </div>
 
         <div dangerouslySetInnerHTML={{ __html: userData }} />
+      </>
+      }
+
         </div>
   );
 }

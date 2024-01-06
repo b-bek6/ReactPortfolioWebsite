@@ -32,7 +32,7 @@ function App() {
     <div className=' transition-all ease-in-out duration-200'>
     <NavigationBar />
       {/* <Home dark={dark} /> */}
-      <button onClick={() => { setDark(!dark) }} className='dark:bg-white bg-black dark:text-black text-white w-9 h-9 rounded-full fixed left-[70%] top-[7%] transition-all duration-500 ease-in-out'>x</button>
+      <button onClick={() => { setDark(!dark) }} className='dark:bg-white z-50 bg-black dark:text-black text-white w-9 h-9 rounded-full fixed left-[70%] top-[7%] transition-all duration-500 ease-in-out'>x</button>
       {/* <div className='flex gap-10 mt-10 justify-center items-center'>
       </div> */}
     </div>
