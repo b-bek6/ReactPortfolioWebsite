@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import Home from './components/home';
+import Home from './components/Home';
 import Footer from './components/footer';
 import Navbar from './components/Navbar';
 import { Route, Routes } from 'react-router-dom';

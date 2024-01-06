@@ -1,12 +1,9 @@
 import React from 'react'
-import Navbar from './Navbar'
 import Card from './Card'
-import Socialbar from './Socialbar'
-import Footer from './footer'
 import ProjectCard from './ProjectCard'
 import ServiceCard from './ServiceCard'
 import Timeline from './Timeline'
-export default function home({ dark }) {
+export default function home() {
   return (
     <>
       <div className='container'>
