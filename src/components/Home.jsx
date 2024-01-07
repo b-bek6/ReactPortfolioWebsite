@@ -15,7 +15,10 @@ export default function home() {
             </div>
           </div>
           <p className='dark:text-white pt-10 flex items-start text-left justify-start opacity-50 text-[17px]'>
-            I'm a frontend developer, optimist, and community builder. I currently work as the VP of Developer Experience at Vercel, where I lead the community for Next.js, an open-source web framework built with React. Here are the links below, where you can follow me and know more about my interests.
+            
+As a software developer, I'm dedicated to continuous self-improvement, refining my skills through daily study and hands-on work. Passionate about creating efficient solutions and enhancing user experiences, I embrace challenges to evolve and innovate in the dynamic landscape of software development.
+
+You can follow me @
           </p>
         </div>
         {/* <Socialbar /> */}
@@ -33,7 +36,8 @@ export default function home() {
 
 
           <p className='dark:text-white pt-10 flex items-start text-left justify-start opacity-50 text-[17px]'>
-            also you can check some of my projects, to know more about experties and the field of my experiences, i have build many projects including this portfolio websites this was developed and inspired by leebroo
+           
+You can review some of my projects to gain insights into my expertise and experience in the field. I have created numerous projects, including this portfolio website, with inspiration drawn from leebroo for this particular development.
           </p>
           <div className='grid  pt-10 grid-cols-1 gap-4'>
             <ProjectCard/>
