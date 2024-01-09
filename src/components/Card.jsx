@@ -15,7 +15,7 @@ export default function Card() {
           </div>
         <div className='grid text-left'>
         <p>@imbibek1</p>
-        <p className='opacity-50'>258 subscirbers</p>
+        <p className='text-subtext'>258 subscirbers</p>
         </div>
         </div>
         <svg
