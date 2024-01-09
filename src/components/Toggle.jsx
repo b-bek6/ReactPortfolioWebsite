@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Toggle({ dark, setDark }) {
     return (
-        <button onClick={() => { setDark(!dark) }} className={`absolute dark:bg-white  flex justify-center align-middle items-center  z-50 bg-black dark:text-black text-white w-9 h-9 rounded-full  left-[70%] top-[7%] transition-all duration-500 ease-in-out overflow-hidden `}>
+        <button onClick={() => { setDark(!dark) }} className={`absolute  dark:bg-white  flex justify-center align-middle items-center  z-50 bg-black dark:text-black text-white w-9 h-9 rounded-full left-[80%] md:left-[73%]  top-[7%] transition-all duration-500 ease-in-out overflow-hidden `}>
             <div className='relative'>
                 <svg
                     className={`absolute  ${dark == false ? 'translate-x-0' : '-translate-x-10'} transition-all duration-200 ease-in-out `}
