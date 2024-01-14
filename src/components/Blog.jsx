@@ -33,7 +33,7 @@ export default function Blog() {
     <>
     <div className="grid gap-4">
     {
-        !true ?<>
+        !isLoading ?<>
         {
           title.map(data=>(
               <a href={`/blog/${data.id}`}>
