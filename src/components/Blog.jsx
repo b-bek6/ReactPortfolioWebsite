@@ -2,7 +2,7 @@ const apiKey = 'AIzaSyBPTwKepCOBgUBol92g9QLJQy8rjvin1kI';
 const blogId = '6934153127728005078';
 
 import React, { useState, useEffect } from "react";
-import Loading from "./Loading";
+import Loading from "./Loader/Loading";
 
 const bloggerUrl= `https://www.googleapis.com/blogger/v3/blogs/${blogId}/posts?key=${apiKey}&fields=items(title,published,id)`;
 
@@ -33,7 +33,7 @@ export default function Blog() {
     <>
     <div className="grid gap-4">
     {
-        !isLoading ?<>
+        !true ?<>
         {
           title.map(data=>(
               <a href={`/blog/${data.id}`}>

@@ -2,7 +2,7 @@ const apiKey = 'AIzaSyBPTwKepCOBgUBol92g9QLJQy8rjvin1kI';
 const blogId = 'UCfqkTL1RcKTtQXYeI0qHxhA';
 
 import React, { useState, useEffect } from "react";
-import Loading from "./Loading";
+import Loading from "./Loader/Loading";
 
 // const bloggerUrl= `https://www.googleapis.com/youtube/v3/videos/${blogId}/posts?key=${apiKey}`;
 // const bloggerUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${blogId}&maxResults=10&order=date&type=video&key=${apiKey}`
