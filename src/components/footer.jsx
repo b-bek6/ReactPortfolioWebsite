@@ -5,7 +5,7 @@ export default function Footer({ dark }) {
     const currentYear = new Date().getFullYear();
     const svgData = `<?xml version="1.0" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="${!dark ? '#b7b6b6' : '#404040'}" fill-opacity="1000" d="M0,288L120,250.7C240,213,480,139,720,138.7C960,139,1200,213,1320,250.7L1440,288L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>`;
     const textStyle = {
-        fontFamily: 'none', // Use a generic cursive font family
+        // fontFamil:'', // Use a generic cursive font family
         // Add more CSS properties as needed
     };
 
@@ -69,7 +69,7 @@ export default function Footer({ dark }) {
 
                 </div>
 
-                <p style={textStyle} className="absolute font-serif top-28 left-0 right-0 bottom-0 flex items-center justify-center text-black dark:text-white">©{currentYear} Bibek Ghimire, All rights reserved.</p>
+                <p style={textStyle} className="absolute top-40 left-0 right-0 bottom-0 flex items-center justify-center text-black dark:text-white">©{currentYear} Bibek Ghimire, All rights reserved.</p>
 
 
 

@@ -5,12 +5,12 @@ export default function ProjectCard() {
   return (
     <>
 
-<a href="#" class="flex flex-col sm:flex-row opacity-75 hover:opacity-100  items-center bg-primary  rounded-lg dark:text-white  md:flex-row p-4  dark:bg-darkPrimary transition-all ease-in-out duration-200">
-    <img class="object-cover rounded-t-lg w-fit h-auto sm:w-48 sm:h-auto md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src={img} alt="" />
-    <div class="flex flex-col justify-between p-4 leading-normal">
+<a href="#" class="flex justify-between flex-col sm:flex-row text-slate-400  items-center bg-primary  rounded-lg dark:text-white  md:flex-row p-4  dark:bg-darkPrimary transition-all ease-in-out duration-200">
+    {/* <img class="object-cover rounded-t-lg w-fit h-auto sm:w-48 sm:h-auto md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src={img} alt="" /> */}
+    {/* <div class="flex flex-col justify-between p-4 leading-normal"> */}
         <h5 class="mb-2 text-2xl font-bold tracking-tight   ">Job Portal</h5>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-    </div>
+        {/* <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+    </div> */}
     <div>
     <svg
       fill="currentColor"
