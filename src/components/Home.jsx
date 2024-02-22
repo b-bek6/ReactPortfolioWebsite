@@ -3,6 +3,7 @@ import Card from './Card'
 import ProjectCard from './ProjectCard'
 import ServiceCard from './ServiceCard'
 import Timeline from './Timeline'
+import TechStack from './TechStack'
 export default function home() {
   return (
     <>
@@ -18,25 +19,25 @@ export default function home() {
 
             As a software developer, I'm dedicated to continuous self-improvement, refining my skills through daily study and hands-on work. Passionate about creating efficient solutions and enhancing user experiences, I embrace challenges to evolve and innovate in the dynamic landscape of software development.
 
-            You can follow me @
+            
           </p>
         </div>
         {/* <Socialbar /> */}
         <div className='md:grid grid-cols-2 gap-4'>
-          <Card />
-          <Card />
+          <Card title='@imbibek' description='258 subscribers'/>
+          <Card title='@bibek.ghimire_' description='393 followers'/>
         </div>
         <hr class="h-px mt-10 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-        <div className="w-full mt-5 justify-center flex flex-col items-center">
+        {/* <div className="w-full mt-5 justify-center flex flex-col items-center">
           <div className=" w-full" >
-            <p className="text-2xl  text-left dark:text-white "> my projects 🏆</p>
           </div>
-        </div>
+        </div> */}
 
 
 
         <div className="project-info">
       <p className='pt-10 items-start text-left text-subtext text-[17px]'>
+            <p className="text-2xl text-black pb-4 text-left dark:text-white "> my projects 🏆</p>
         You can review some of my projects to gain insights into my expertise and experience in the field. I have created numerous projects, including this portfolio website, with inspiration drawn from leebroo for this particular development. Checkout my 
         <a href="https://github.com/b-bek6" target="_blank" className="px-2 underline github-link">
            Github 
@@ -45,26 +46,34 @@ export default function home() {
       </p>
     </div>
         <div className='grid  pt-10 grid-cols-1 gap-4'>
-          <ProjectCard />
-          <ProjectCard />
-          {/* <ProjectCard/>
-            <ProjectCard/> */}
+          <ProjectCard title="Job Portal"/>
+          <ProjectCard title="Ecommerce Site"/>
         </div>
 
         <div>
-          <div className='dark:text-white pt-10 flex items-start text-left justify-start text-subtext text-[17px]'>
-            here's my timeline from the day that i was born to the date i am building this website
+          <div className='dark:text-subtext pt-10 grid items-start text-left justify-start text-subtext text-[17px]'>
+          <p className="text-2xl text-black text-left dark:text-white "> my timeline </p>
+            here's my timeline, a journey through experiences that have shaped me.
           </div>
-          <div className='grid animate-fade-up animate-once  pt-10 grid-cols-1 gap-4'>
+          <div className='grid animate-fade-up animate-once  pt-6 grid-cols-1 gap-4'>
             <Timeline />
           </div>
 
         </div>
 
-        <div className='dark:text-white pt-10 flex items-start text-left justify-start text-subtext text-[17px]'>
+        <div className='pt-10 grid items-start text-left justify-start text-subtext text-[17px]'>
+        <p className="text-2xl text-black text-left dark:text-white "> my tech stack 📚 </p>
+          showcasing the frameworks and libraries I've worked with.
+        </div>
+        <div className='md:grid grid-cols-6 md:grid-cols-4  pt-4  gap-4'>
+          <TechStack/>
+        </div>
+
+        <div className='pt-10 grid items-start text-left justify-start text-subtext text-[17px]'>
+        <p className="text-2xl text-black text-left dark:text-white "> my services 🧑🏼‍🔧</p>
           These are the services I can provide if you hire me.
         </div>
-        <div className='md:grid grid-cols-4 md:grid-cols-4  pt-10  gap-4'>
+        <div className='md:grid grid-cols-4 md:grid-cols-4  gap-4'>
           <div className="md:col-span-2">
             <ServiceCard title={"Web Application Development"} fontFamily="RubikScribble" color="skyblue" />
           </div>
